@@ -1,0 +1,7 @@
+---
+
+- name: copy config tracker.mysql.php file
+  template: src=tracker.mysql.php dest=/var/www/html/peertracker/mysql/tracker.mysql.php
+              owner=root mode=0644
+  notify:
+    - restart apache2

@@ -1,0 +1,10 @@
+---
+
+- name: download mysql mysql_apt_config
+  get_url: url=http://dev.mysql.com/get/mysql-apt-config_0.7.2-1_all.deb dest=/root/
+
+- name: install download pkg
+  apt: deb=/root/mysql-apt-config_0.7.2-1_all.deb
+
+- name: update repo
+  apt: update_cache=yes

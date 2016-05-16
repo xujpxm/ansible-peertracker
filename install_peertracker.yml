@@ -1,0 +1,8 @@
+---
+
+- name: install peertracker start
+  hosts: 10.13.5.3
+  remote_user: root
+
+  roles:
+    - common

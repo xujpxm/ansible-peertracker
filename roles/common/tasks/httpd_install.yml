@@ -1,0 +1,17 @@
+---
+- name: install httpd  mysql and php etc.
+  apt: name={{ item }} state=present
+  with_items:
+    - apache2
+    - php5
+    - php5-mysql
+    - git
+    - mysql-server
+
+
+- name: mysql service start
+  service: name=mysql state=started
+
+- name: nginx service start
+  service: name=apache2 state=started
+
