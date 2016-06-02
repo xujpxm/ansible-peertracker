@@ -1,0 +1,12 @@
+---
+
+- name: create transmission download dir
+  hosts: transmission
+  remote_user: root
+
+  tasks:
+    - name: mk download dir task 
+      file: path=/data/transmission-daemon/downloads state=directory mode=0755 owner=debian-transmission group=debian-transmission
+         
+  
+

@@ -1,0 +1,25 @@
+---
+
+#Used to install transmission and setting config file
+# confugre rpc-password ,rpc-whitelist ,download-dir in settting file
+
+- name: Install transmission task start
+  apt:
+    name=transmission-daemon
+    state=present
+
+- name: stop transmission-daemon
+  service: name=transmission-daemon state=stopped
+
+- name: copy /etc/transmission-daemon/settings.json
+  template:
+    src=settings.json
+    dest=/etc/transmission-daemon/settings.json
+    mode=0600
+    owner=debian-transmission
+
+
+- name: start transmission-daemon
+  service: name=transmission-daemon state=started
+
+

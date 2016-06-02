@@ -44,7 +44,7 @@ $_SERVER['tracker'] = array(
 //	'db_host'           => 'localhost',   /* ip or hostname to mysql server */
 	'db_host'           => '127.0.0.1',   /* ip or hostname to mysql server */
 	'db_user'           => 'peertracker',        /* username used to connect to mysql */
-	'db_pass'           => 'P@$$w0rd',            /* password used to connect to mysql */
+	'db_pass'           => 'yais6Yab',            /* password used to connect to mysql */
 	'db_name'           => 'peertracker', /* name of the PeerTracker database */
 
 	// advanced database options
