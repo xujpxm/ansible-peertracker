@@ -36,16 +36,16 @@ github respository: <https://github.com/JonnyJD/peertrackeris>
 
 
 
-###transmission的安装、配置
-**安装**  
+### transmission的安装/配置  
+**安装**    
 安装很简单，直接apt-get安装即可，运行transmission的role,脚本会自动安装。  
 安装过程中会顺带把transmission-cli也安装上，安装完毕后系统会多出如下一些命令行工具。 
-transmission-cli： 独立的命令行客户端。  
-transmission-create： 用来建立.torrent种子文件的命令行工具。  
-transmission-daemon： 后台守护程序。  
-transmission-edit： 用来修改.torrent种子文件的announce URL。  
-transmission-remote： 控制daemon的程序。  
-transmission-show：查看.torrent文件的信息。  
+* transmission-cli： 独立的命令行客户端。  
+* transmission-create： 用来建立.torrent种子文件的命令行工具。  
+* transmission-daemon： 后台守护程序。  
+* transmission-edit： 用来修改.torrent种子文件的announce URL。  
+* transmission-remote： 控制daemon的程序。  
+* transmission-show：查看.torrent文件的信息。  
 **配置**  
 settings.json是主要的配置文件，设置daemon的各项参数，包括RPC的用户名密码配置。它实际上是一个符号链接，指向的原始文件是/etc/transmission-daemon/settings.json。  
 脚本里提供了一个模板文件，主要修改了下载路径、rpc认证和白名单、默认的rpc认证用户名/密码为：transmission/transmission  
