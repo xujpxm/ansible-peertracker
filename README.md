@@ -1,4 +1,4 @@
-#简介
+# 简介
 这是一个用ansible写的自动化搭建P2P传输网络的脚本。Tracker采用谷歌10年开源出来的peertracker，p2p种子的生成和传输采用transmission。
 
 ## Peertracker
@@ -10,7 +10,7 @@ PeerTracker是一个简单、高效、迅速的BitTorent Tracker。
 脚本里采用的web server是apache2,数据库使用mysql。   
 
 
-###Important Links:
+### Important Links:
 ---
 Development Website: <http://code.google.com/p/peertracker/>  
 Issue Tracker: <http://code.google.com/p/peertracker/issues/list>  
@@ -28,8 +28,8 @@ github respository: <https://github.com/JonnyJD/peertrackeris>
 也可以查看peer的状态：<http://serverip/peertracker/mysql/scrape.php?stats>
 
 
-
-##Transmission
+ 
+## Transmission
   Transmission是一个强大的BitTorrent开源客户端，实现了BT协议中描述的大多数功能。目前，在它的官方网站上提供了多个版本可以下载，包括：Mac、GTK+、QT版本，还有Daemon版本。  
   Transmission支持DHT、Magnet Link、uTP以及PEX等特性。尤其是支持Magnet Link磁力链接下载十分重要，因为目前网上很多资源都是采用这种方式来分享的，而不是传统的.torrent文件，例如TPB、BTDigg。  
 
