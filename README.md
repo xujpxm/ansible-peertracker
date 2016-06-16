@@ -107,5 +107,7 @@ RPC的几个配置参数：
 
 ![speed](https://github.com/xujpxm/picture/blob/master/peer.png?raw=true)  
 
-**需要注意的是transmission的下载路径是/data/transmission-daemon/downloads,注意文件目录是否存在和权限,可以用download_dir.yml脚本创建**
+**需要注意的是transmission的下载路径是/data/transmission-daemon/downloads,注意文件目录是否存在和权限,可以用mk_download_dir.yml脚本创建**
+
+**transmission-create 创建的种子文件的权限是600,需要更改为644,使other可读**
 
