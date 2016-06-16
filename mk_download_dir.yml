@@ -3,7 +3,7 @@
 # This yml used to create transmission download dir
 
 - name: create transmission download dir
-  hosts: transtest
+  hosts: transmission
   remote_user: root
 
   tasks:

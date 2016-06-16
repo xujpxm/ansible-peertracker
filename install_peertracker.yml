@@ -1,7 +1,7 @@
 ---
 
 - name: install peertracker start
-  hosts: labserver
+  hosts: peertracker
   remote_user: root
 
   roles:
