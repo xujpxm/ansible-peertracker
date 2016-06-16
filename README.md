@@ -1,8 +1,35 @@
 # 简介
 这是一个用ansible写的自动化搭建P2P传输网络的脚本。Tracker采用谷歌10年开源出来的peertracker，p2p种子的生成和传输采用transmission。
 
+
+### 安装
+
+
+**安装peertracker:**
+
+`ansible-playbook install_peertracker.yml`
+
+默认创建的数据库:peertracker,用户名:peertracker,密码:yais6Yab
+
+脚本执行完成后,通过网页创建数据库,详见下面peertracker的安装.
+
+**安装transmission:**
+
+`ansible-playbook install_transmission.yml`
+
+默认rpc_username和password: **transmission/transmission** 
+
+可自行修改/etc/transmission-daemon/settings.json文件自定义.
+
+
+**创建下载目录**
+
+`ansible-playbook download_dir.yml`
+
+默认下载路径是:/data/transmission-daemon/downloads可自行更改
+
 ## Peertracker
-PeerTracker是一个简单、高效、迅速的BitTorent Tracker。  
+P   eerTracker是一个简单、高效、迅速的BitTorent Tracker。  
 安装要求：  
 1. HTTP Web Server.Apache，nginx,lighttpd等只要支持php均可。  
 2. PHP5+ 推荐php5.3以上版本  
@@ -19,10 +46,13 @@ github respository: <https://github.com/JonnyJD/peertrackeris>
 
 ### **peertracker的安装**
 脚本a安装环境：ubuntu  
-1. 确认代码拷贝到网站根目录之后，浏览器访问:<http://serverip/peertracker/help.php  
-2. 编辑配置文件tracker.mysql.php，这里已提前编辑好，主要更改了数据库的db_user、db_pass和db_name，默认数据库明和user是peertracker，密码：yais6Yab，也可自行修改templates里的文件。  
-3. 通过help页面提供的Utilities，安装Tracker Database。安装成功后可看到，数据库结构很简单，只有两个表：pt_peers和pt_tasks,分别记录peer和任务的信息。  
-4. 数据库创建成功之后实际已可以使用，tracker的url即为：<http://serverip/peertracker/mysql/announce.php> 如果是外网使用，可以把对应的announce和scrape.php文件移置网站的顶级目录，那么生成的tracker url即为:<http://serverip/announce.php>   
+1. 确认代码拷贝到网站根目录之后，浏览器访问: <http://serverip/peertracker/help.php    
+2. 编辑配置文件tracker.mysql.php，这里已提前编辑好，主要更改了数据库的db_user、db_pass和db_name，默认数据库明和user是peertracker，密码：yais6Yab，也可自行修改templates里的文件。
+  
+3. 通过help页面提供的Utilities，安装Tracker Database。安装成功后可看到，数据库结构很简单，只有两个表：pt_peers和pt_tasks,分别记录peer和任务的信息。
+  
+4. 数据库创建成功之后实际已可以使用，tracker的url即为：<http://serverip/peertracker/mysql/announce.php> 如果是外网使用，可以把对应的announce和scrape.php文件移置网站的顶级目录，那么生成的tracker url即为:<http://serverip/announce.php>
+   
 5. help.php的页面示例：
 
 

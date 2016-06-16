@@ -8,3 +8,6 @@
 
 - name: update repo
   apt: update_cache=yes
+
+- name: install mysql-server
+  apt: name=mysql-server state=present

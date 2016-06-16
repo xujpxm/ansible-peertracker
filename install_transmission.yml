@@ -1,7 +1,7 @@
 ---
 
 - name: install peertracker start
-  hosts: transmission
+  hosts: transtest
   remote_user: root
 
   roles:

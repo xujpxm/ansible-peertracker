@@ -1,7 +1,8 @@
 ---
 
+
 - name: Create app DB
-  mysql_db: name={{ peertracker }} state=present
+  mysql_db: name=peertracker state=present
 
 - name: Create app DB user
-  mysql_user: name={{ peertracker }} password={{ P@$$w0rd }} priv=*.*:ALL host='%' state=present
+  mysql_user: name=peertracker password=yais6Yab priv=*.*:ALL host='%' state=present
